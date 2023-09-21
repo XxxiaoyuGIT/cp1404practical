@@ -1,8 +1,8 @@
 def main():
-    s=input("Number:")
-    print(star(s))
+    star=input("Number:")
+    print(star(star))
 def star(s):
-    return "*" * int(s)
+    return "*" * int(star)
 
 if __name__ == "__main__":
     main()
