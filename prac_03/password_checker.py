@@ -25,7 +25,7 @@ def main():
     print(f"Your {len(password)}-character password is valid: {password}")
 
 def is_valid_password(password):
-    """Determine if the provided password is valid."""
+    """Determine if the provided password is valid ."""
     if len(password) < MIN_LENGTH or len(password) > MAX_LENGTH:
         return False
 

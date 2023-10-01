@@ -32,4 +32,4 @@ while MIN_PRICE <= price <= MAX_PRICE:
     number_of_days += 1  # Increment the number of days
     print(f"On day {number_of_days} price is: ${price:.2f}", file=out_file)
 
-out_file.close()  # Close the output file at the very end
+out_file.close()  # Close the output file at the very end.

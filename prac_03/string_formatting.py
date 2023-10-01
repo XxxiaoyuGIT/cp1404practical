@@ -7,6 +7,6 @@ output = f"{year} {name} for about ${cost:,.2f}!"
 
 print(output)
 
-# Using a for loop with string formatting to produce the right-aligned numbers
+# Using a for loop with string formatting to produce the right-aligned numbers.
 for i in range(0, 201, 50):
     print(f"{i:3}")

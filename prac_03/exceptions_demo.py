@@ -1,5 +1,5 @@
 """
-CP1404/CP5632 - Practical
+CP1404 - Practical
 Answer the following questions:
 1. When will a ValueError occur?
 When the input is not an integer: for example,when it is a decimal or a letter, a ValueError will be output.
