@@ -4,7 +4,6 @@ def extract_name(email):
     full_name = ' '.join(name_parts)
     return full_name
 
-
 def main():
     user_data = {}
 
