@@ -1,21 +1,26 @@
 from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
+from kivy.lang import Builder
 from kivy.uix.label import Label
+from kivy.properties import StringProperty
 
-class SimpleApp(App):
+Names = ["Kana", "Lisana", "Kokomi", "Xiao", "Furina"]
+
+
+class DynamicLabels(App):
+    """"""
+    status_text = StringProperty()
+    def __init__(self, **kwargs):
+        super().__init__(**kwargs)
+        self.names = Names
     def build(self):
-        # Data (list of names)
-        names = ["Kana", "Kokomi", "Lisana", "Ellis"]
+        self.title = "Dynamic Labels"
+        self.root = Builder.load_file('dynamic_labels.kv')
+        self.create_widgets()
+        return self.root
+    def create_widgets(self):
+        for name in self.names:
+            temp_button = Label(text=name)
+            self.root.ids.main.add_widget(temp_button)
 
-        # Root widget
-        root = BoxLayout(orientation='vertical')
 
-        # Create Labels dynamically
-        for name in names:
-            label = Label(text=name)
-            root.add_widget(label)
-
-        return root
-
-if __name__ == '__main__':
-    SimpleApp().run()
+DynamicLabels().run()
